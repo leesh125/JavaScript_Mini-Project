@@ -1,4 +1,4 @@
-const API_KEY = "your api key";
+const API_KEY = "7bd814cbd58e531a2c97ea0a156c9184";
 
 // 성공했을때의 함수는 GeolocationPosition 객체를 넘겨줌
  // 그 객체에서 위도와 경도를 추출할 수 있음..ㄷ

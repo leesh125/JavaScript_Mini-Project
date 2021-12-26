@@ -22,8 +22,8 @@ function onGeoOk(position) {
     // 3. then(data => { "some data" }
     //    -> 응답 받은 json data를 활용한다.
         const weather = document.querySelector("#weather span:first-child");
-        const temp = document.querySelector("#weather span:last-child");
-        const city = document.querySelector("#weather span:nth-child(2)");
+        const city = document.querySelector("#weather span:last-child");
+        const temp = document.querySelector("#weather span:nth-child(2)");
         weather.innerText = data.weather[0].main;
         temp.innerText = data.main.temp;
         city.innerText = data.name;

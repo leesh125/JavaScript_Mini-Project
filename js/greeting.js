@@ -2,6 +2,7 @@ const loginForm = document.querySelector("#login-form");
 const loginInput = document.querySelector("#login-form input");
 const greeting = document.querySelector("#greeting");
 const bucketList = document.querySelector("#bucketList");
+const bucketListDiv = document.querySelector(".bucketList-div");
 const link = document.querySelector("a");
 
 const HIDDEN_CLASSNAME = "hidden";
@@ -19,6 +20,7 @@ function paintGreetings(username) {
     greeting.innerText = `Hello ${username}`; 
     greeting.classList.remove(HIDDEN_CLASSNAME);
     bucketList.classList.remove(HIDDEN_CLASSNAME);
+    bucketListDiv.classList.remove(HIDDEN_CLASSNAME);
     todoInput.classList.remove(HIDDEN_CLASSNAME);
 }
 

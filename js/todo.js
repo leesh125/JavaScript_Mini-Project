@@ -38,7 +38,7 @@ function paintToDo(newTodo){ // newTodo는 이제 객체이다
 }
 
 function handleToDoSubmit(event) {
-    event.preventDefault(); 
+    
     const newTodo = todoInput.value;  // 입력한 문자열을 저장
     todoInput.value = ""; 
     const newTodoObj = {

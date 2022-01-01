@@ -1,5 +1,17 @@
 const API_KEY = "7bd814cbd58e531a2c97ea0a156c9184";
-
+const weatherIcon = {
+    '01' : 'fas fa-sun',
+    '02' : 'fas fa-cloud-sun',
+    '03' : 'fas fa-cloud',
+    '04' : 'fas fa-cloud-meatball',
+    '09' : 'fas fa-cloud-sun-rain',
+    '10' : 'fas fa-cloud-showers-heavy',
+    '11' : 'fas fa-poo-storm',
+    '13' : 'far fa-snowflake',
+    '50' : 'fas fa-smog'
+    };
+    
+    출처: https://byul91oh.tistory.com/31 [개꼬 [: 개발하는 꼬바리]]
 // 성공했을때의 함수는 GeolocationPosition 객체를 넘겨줌
  // 그 객체에서 위도와 경도를 추출할 수 있음..ㄷ
 function onGeoOk(position) {
@@ -21,12 +33,15 @@ function onGeoOk(position) {
     //   -> 응답으로 해당 url에 json을 받는다.(개발자모드 network에서 fetch된 url 확인해보기)
     // 3. then(data => { "some data" }
     //    -> 응답 받은 json data를 활용한다.
-        const weather = document.querySelector("#weather span:first-child");
+        const weather = document.querySelector("#weather span:first-child #weather-icon");
         const city = document.querySelector("#weather span:last-child");
         const temp = document.querySelector("#weather span:nth-child(2)");
-        weather.innerText = data.weather[0].main;
-        temp.innerText = data.main.temp;
+        let icon = data.weather[0].icon.substr(0,2);
+
+        weather.className += weatherIcon[icon]
         city.innerText = data.name;
+        temp.innerText = Math.round(data.main.temp) + '°';
+        console.log(data.weather[0].icon);
     });
     
 }

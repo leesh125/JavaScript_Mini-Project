@@ -1,13 +1,31 @@
-const images = [
-    "eiffel_tower-France.jpg",
-    "golden_temple-India.jpg",
-    "santorini-Greece.jpg"
-]
+const images = {
+    "greece" : "greece.jpg",
+    "그리스" : "greece.jpg",
+    "france" : "france.jpg",
+    "프랑스" : "france.jpg",
+    "japan" : "japan.jpg",
+    "일본" : "japan.jpg",
+    "singapore" : "singapore.jpg",
+    "싱가포르" : "singapore.jpg",
+    "싱가폴" : "singapore.jpg"
+}
+let bgImage = 'img/default.jpg';
+try {
+    const country = toDos[0].text;
+    const chosenImage = images[country]
+    if(chosenImage != undefined){
+        bgImage = `img/${chosenImage}`;
+    }else{
+        bgImage = 'img/default.jpg';
+    }
+} catch (error) {
+    console.log(error)
+}
 
-const chosenImage = images[Math.floor(Math.random() * images.length)];
+// const chosenImage = images[Math.floor(Math.random() * images.length)];
 
 // createElement : html 태그 요소 생성 
-const bgImage = `img/${chosenImage}`;
+
 const bgImageDiv = document.createElement("div");
 const bodyDiv = document.querySelector(".body-div");
 

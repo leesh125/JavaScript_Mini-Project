@@ -45,7 +45,7 @@
             </p>
         </div>
         <div class="bucketList-div hidden">
-            <div class="bucket-webflow-style-input">
+            <div class="bucket-webflow-style-input hidden">
                 <form id="todo-form">   
                     <input class="hidden" type="text" placeholder="Your travel destination" required></input>
                     <button type="submit">
@@ -56,16 +56,19 @@
                     </button>
                 </form>
             </div>
-            <ul id="todo-list"></ul>
+        </div>
+        <div id="todo-list">
+            <span id="country-span" class="hidden"></span>
+            <button type="submit" id="country-btn" class="hidden"></button>
         </div>
         <div id=quote>
             <span></span>
             <span></span>
         </div>
     </div>
+    <script src="js/clock.js"></script>
     <script src="js/todo.js"></script>
     <script src="js/greeting.js"></script>
-    <script src="js/clock.js"></script>
     <script src="js/quotes.js"></script>
     <script src="js/background.js"></script>
     <script src="js/weather.js"></script>

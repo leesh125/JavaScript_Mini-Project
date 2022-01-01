@@ -11,7 +11,7 @@ const images = {
 }
 let bgImage = 'img/default.jpg';
 try {
-    const country = toDos[0].text;
+    const country = localStorage.getItem("todos");
     const chosenImage = images[country]
     if(chosenImage != undefined){
         bgImage = `img/${chosenImage}`;
